@@ -1,0 +1,23 @@
+#menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
+  #menu-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+  }
+
+
+  a.underline-anim { position: relative; }
+  a.underline-anim::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+  }
+  a.underline-anim:hover::after { width: 100%; }
