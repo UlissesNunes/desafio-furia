@@ -1,8 +1,9 @@
 
 // chat FURIA 24H
+
 const chat = document.getElementById("chat");
 const input = document.getElementById("mensagem");
-const botao = document.getElementById("enviar");
+let botao = document.querySelector("button#enviar-btn");
 
 botao.addEventListener("click", () => {
   const texto = input.value.trim();
@@ -43,16 +44,19 @@ function responderBot(mensagem) {
   }, 1000);
 }
 // Menu Hamburguer
-const menuBtn = document.getElementById("menu-btn");
-const mobileMenu = document.getElementById("menu-mobile");
 
-menuBtn.addEventListener("click", () => {
-  menuBtn.classList.toggle("active");
-  mobileMenu.classList.toggle("hidden");
-});
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("menu-mobile");
+
+  menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    mobileMenu.classList.toggle("hidden");
+  });
 
 
-//carrosel
+
+
+/* carrosel
 
 const carousel = document.querySelector("#carousel > div");
 const totalItems = carousel.children.length;
@@ -65,4 +69,13 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 document.getElementById("prevBtn").addEventListener("click", () => {
   index = (index - 1 + totalItems) % totalItems;
   carousel.style.transform = `translateX(-${index * 100}%)`;
-}); 
+}); */
+
+
+
+
+
+
+
+
+

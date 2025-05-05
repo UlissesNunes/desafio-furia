@@ -1,91 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <title>Furia.gg - Seja um FURIOSO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="furia.css">
     <link rel="shortcut icon" href="assetments/Furia_Esports_logo.png" type="image/x-icon">
-    
-  </head>
-  
-  <body class="bg-black text-white min-h-screen flex flex-col">
-    <!-- HEADER -->
-    <header class="fixed top-0 w-full z-50 bg-white shadow-md ">
-      <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <div class="text-black text-xl font-bold"><img src="assetments/logo-furia.svg" alt=""></div> 
-        <button id="menu-btn" class="md:hidden flex flex-col gap-1 ">
-          <span class="w-6 h-0.5 bg-black  transition-all duration-300"></span>
-          <span class="w-6 h-0.5 bg-black  transition-all duration-300"></span>
-          <span class="w-6 h-0.5 bg-black transition-all duration-300"></span>
-        </button>
-        <ul id="menu" class="hidden md:flex space-x-6 text-black font-medium">
-          <li><a href="#" class="underline-anim text-black">Quem Somos</a></li>
-          <li><a href="#" class="underline-anim text-black" >Contato</a></li>
-          <li><a href="#" class="underline-anim text-black">Fan Zone</a></li>
-        </ul>
-      </nav>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-      <!-- Menu Mobile -->
-      <ul id="menu-mobile" class="hidden flex-col space-y-2 text-white bg-black px-4 py-2 md:hidden">
-        <li><a href="#" class="underline-anim text-white inline">Quem Somos</a></li>
-        <li><a href="#" class="underline-anim text-white inline">Contato</a></li>
-        <li><a href="#" class="underline-anim text-white inline">Fan Zone</a></li>
-      </ul>
+<body class="bg-black text-white min-h-screen flex flex-col">
+    <header class="fixed top-0 w-full z-50 bg-white shadow-md ">
+        <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="text-black text-xl font-bold"><img src="assetments/logo-furia.svg" alt=""></div>
+            <button id="menu-btn" class="md:hidden flex flex-col gap-1 ">
+                <span class="w-6 h-0.5 bg-black  transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-black  transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-black transition-all duration-300"></span>
+            </button>
+            <ul id="menu" class="hidden md:flex space-x-6 text-black font-medium">
+                <li><a href="#" class="underline-anim text-black">Quem Somos</a></li>
+                <li><a href="#" class="underline-anim text-black" >Contato</a></li>
+                <li><a href="#" class="underline-anim text-black">Fan Zone</a></li>
+            </ul>
+        </nav>
+
+        <ul id="menu-mobile" class="hidden flex-col space-y-2 text-white bg-black px-4 py-2 md:hidden">
+            <li><a href="#" class="underline-anim text-white inline">Quem Somos</a></li>
+            <li><a href="#" class="underline-anim text-white inline">Contato</a></li>
+            <li><a href="#" class="underline-anim text-white inline">Fan Zone</a></li>
+        </ul>
     </header>
 
-    <!-- MAIN -->
-     
     <main class="min-h-screen flex flex flex-col items-center justify-center text-center pt-10px-4">
-      <h1 class="text-4xl font-bold mb-2 pt-20">Chat da Torcida FURIA</h1>
-      <p class="text-gray-100 mb-6 ">Converse, veja placares e interaja com a galera!</p>
-      
+        <img src="assetments/Furia_Esports_logo.png" alt="" class=" mb-8 w-20 sm:w-24 md:w-24 lg:w-22 ">
 
-      <div class="w-full max-w-md md:max-w-lg bg-gray-100 rounded-xl p-2 shadow-lg"><img src="assetments/Furia_Esports_logo.png" alt="" class="inline w-14 sm:w-24 md:w-24 lg:w-22 "> 
-       
-        <div id="chat" class="w-full h-64 overflow-y-auto bg-black p-3 rounded mb-2 flex flex-col"></div>
-      
-        <div class="flex gap-2">
-          <input
-            id="mensagem"
-            type="text"
-            class="flex-1 p-2 rounded-l bg-black text-white focus:outline-none"
-            placeholder="Digite sua mensagem"
-          />
-          <button
-            id="enviar"
-            class="bg-gray-300 hover:bg-yellow-700  text-black font-bold px-2 py-1 rounded-r focus:outline-none"
-          >
-            Enviar 
-          </button>
+
+        <div class="w-full max-w-md md:max-w-lg bg-gray-100 rounded-xl p-2 shadow-lg">
+            <div id="chat" class="w-full h-64 overflow-y-auto bg-black p-3 rounded mb-2 flex flex-col"></div>
+
+            <div class="flex flex-col gap-2">
+                <div id="palavras-chave" class="flex flex-wrap gap-2 mb-2">
+                    </div>
+                <div class="flex gap-2">
+                    <input
+                        id="mensagem"
+                        type="text"
+                        class="flex-1 p-2 rounded-l bg-black text-white focus:outline-none"
+                        placeholder="Digite sua mensagem"
+                    />
+                    <button id="enviar-btn"
+                        class="bg-gray-300 hover:bg-yellow-800  text-black font-bold px-2 py-1 rounded-r focus:outline-none"
+                    >
+                        Enviar
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-     
-     
+
+
     </main>
     <div class="flex justify-center space-x-4 mt-6">
         <button class="bg-white hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded">
-          <a href="placaresFuria.html">Ver Placares</a>
+            <a href="placaresFuria.html">Ver Placares</a>
         </button>
         <button class="bg-white hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded">
-          <a href="jogosFuria.html">Próximos Jogos</a>
+            <a href="jogosFuria.html">Próximos Jogos</a>
         </button>
         <button class="bg-white hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded">
-          <a href="https://www.instagram.com/furiagg/" >Comunidade</a>
+            <a href="https://www.instagram.com/furiagg/" >Comunidade</a>
         </button>
-      </div>
+    </div>
 
-    <!-- FOOTER -->
     <footer class="bg-black text-white py-4 mt-4">
-      <div class="max-w-6xl mx-auto text-center">
-        <p>&copy; 2025 FURIA.GG. Todos os direitos reservados.</p>
-        <p>Desenvolvido por <a href="https://www.linkedin.com/in/ulisses-nunes-9155ab298/" target="_blank" rel="_external" class="text-white hover:text-yellow-700 font-bold">Ulisses Nunes - Software-Enginner</a></p>
-        <div class="flex justify-center my-122px-4">
-            <a href="https://www.linkedin.com/in/ulisses-nunes-9155ab298/ " target="_blank" rel="_external"><img src="assetments/marcaPessoal.png" alt="marca pessoal" class="w-24 sm:w-34 md:w-44 lg:w-52 mx-auto" /></a>
-          </div>
-        
-       
+        <div class="max-w-6xl mx-auto text-center">
+            <p>&copy; 2025 FURIA.GG. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <a href="https://www.linkedin.com/in/ulisses-nunes-9155ab298/" target="_blank" rel="_external" class="text-white hover:text-yellow-700 font-bold">Ulisses Nunes - Software-Enginner</a></p>
+            <div class="flex justify-center my-122px-4">
+                <a href="https://www.linkedin.com/in/ulisses-nunes-9155ab298/ " target="_blank" rel="_external"><img src="assetments/marcaPessoal.png" alt="marca pessoal" class="w-24 sm:w-34 md:w-44 lg:w-52 mx-auto" /></a>
+            </div>
+        </div>
+
+   <script>
+        const chat = document.getElementById("chat");
+        const input = document.getElementById("mensagem");
+        let botaoEnviar = document.querySelector("button#enviar-btn");
+        const palavrasChaveDiv = document.getElementById("palavras-chave");
+
+        const palavrasChaveRespostas = {
+            "Próximo Jogo": "O próximo jogo da FURIA é contra NAVI!",
+            "Melhor Time": "FURIA é o melhor time do Brasil!",
+            "Vamos FURIA": "Vamos FURIA! 🔥",
+            "Resultado": "FURIA venceu por 16x12!",
+            "Torcida": "Torcida pesada, aqui é FURIA!"
+            // Adicione mais palavras-chave e suas respectivas respostas aqui
+        };
+
+        // Adiciona os botões de palavras-chave dinamicamente
+        for (const palavra in palavrasChaveRespostas) {
+            const botaoPalavra = document.createElement("button");
+            botaoPalavra.textContent = palavra;
+            botaoPalavra.classList.add("bg-white", "hover:bg-yellow-700", "text-black", "font-bold", "py-2", "px-4", "rounded", "mr-2", "mb-2");
+            botaoPalavra.addEventListener("click", () => {
+                const texto = palavra; // Usamos a própria palavra-chave como mensagem do usuário
+                adicionarMensagem("Você", texto);
+                responderBot(texto);
+            });
+            palavrasChaveDiv.appendChild(botaoPalavra);
+        }
+
+        botaoEnviar.addEventListener("click", () => {
+            const texto = input.value.trim();
+            if (texto === "") return;
+
+            adicionarMensagem("Você", texto);
+            responderBot(texto);
+            input.value = "";
+        });
+
+        function adicionarMensagem(usuario, mensagem) {
+            const msg = document.createElement("div");
+            msg.innerHTML = `<strong>${usuario}:</strong> ${mensagem}`;
+            msg.classList.add("mb-2", "text-white"); // Adicionando classe text-white para garantir a cor da mensagem
+            chat.appendChild(msg);
+            chat.scrollTop = chat.scrollHeight;
+        }
+
+        function responderBot(mensagem) {
+            // Verifica se a mensagem do usuário corresponde a alguma palavra-chave
+            if (palavrasChaveRespostas.hasOwnProperty(mensagem)) {
+                setTimeout(() => {
+                    adicionarMensagem("FURIA 24H", palavrasChaveRespostas[mensagem]);
+                }, 1000);
+            } else {
+                // Se não for uma palavra-chave, continua com as respostas aleatórias
+                const respostas = [
+                    "Vamos FURIA! 🔥",
+                    "FURIA é o melhor time do Brasil! ",
+                    "A FURIA é a melhor!",
+                    "FURIA é o time do coração!",
+                    "FURIA é o melhor time do mundo!",
+                    "O próximo jogo é contra NAVI!",
+                    "FURIA venceu por 16x12!",
+                    "Torcida pesada, aqui é FURIA!"
+                ];
+                const resposta = respostas[Math.floor(Math.random() * respostas.length)];
+                setTimeout(() => {
+                    adicionarMensagem("FURIA 24H", resposta);
+                }, 1000);
+            }
+        }
+    </script>
 </body>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="main.js"></script>
+
 </html>

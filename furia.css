@@ -17,7 +17,7 @@
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: currentColor;
+    background-color: rgb(158, 8, 8);
     transition: width 0.3s ease;
   }
   a.underline-anim:hover::after { width: 100%; }
