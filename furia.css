@@ -24,3 +24,32 @@
 
 
   
+
+
+
+  .underline-animation {
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: #f43f5e; /* Mantém a cor vermelha */
+    transition: color 0.3s ease; /* Transição suave para a cor (opcional) */
+  }
+  
+  .underline-animation::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Ajusta a distância da linha */
+    left: 0;
+    width: 0%;
+    height: 2px; /* Espessura da linha */
+    background-color: #f43f5e; /* Cor da linha */
+    transition: width 0.3s ease-out; /* Animação gradual da largura */
+  }
+  
+  .underline-animation:hover {
+    color: #f43f5e; 
+    /* Mantém a cor vermelha no hover (opcional) */
+  }
+  
+  .underline-animation:hover::before {
+    width: 100%;
+  }
